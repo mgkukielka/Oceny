@@ -53,6 +53,7 @@ public class Oceny implements HierarchicalController<MainController> {
     public void initialize() {
         for (TableColumn<Student, ?> studentTableColumn : tabelka.getColumns()) {
             if ("imie".equals(studentTableColumn.getId())) {
+
                 TableColumn<Student, String> imieColumn = (TableColumn<Student, String>) studentTableColumn;
                 imieColumn.setCellValueFactory(new PropertyValueFactory<>("name"));
                 imieColumn.setCellFactory(TextFieldTableCell.forTableColumn());
